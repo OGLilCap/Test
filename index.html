@@ -11,14 +11,14 @@
             margin: 0;
             min-height: 100vh;
             background: 
-                linear-gradient(rgba(218, 165, 32, 0.12), rgba(178, 34, 52, 0.08)),
-                url('https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat fixed; /* rustic wood + subtle flag vibe */
+                linear-gradient(rgba(255, 245, 238, 0.92), rgba(255, 245, 238, 0.75)),
+                url('https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat fixed; /* aged parchment + subtle flag texture */
             background-blend-mode: overlay;
             color: #2e1b0f;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 20px 10px;
             box-sizing: border-box;
         }
         #banner {
@@ -26,73 +26,79 @@
             max-width: 720px;
             text-align: center;
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: 700;
-            color: #b22234; /* American red */
-            background: rgba(255, 255, 255, 0.75);
-            padding: 12px;
-            border-radius: 10px;
-            margin: 20px 0 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            border: 1px solid rgba(178,34,52,0.2);
+            color: #b22234;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 12px 20px;
+            border-radius: 12px;
+            margin: 20px 0 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            border: 1px solid rgba(178,34,52,0.25);
         }
         #fact-container {
             max-width: 720px;
-            background: #f4e9d8; /* aged parchment */
-            padding: 40px 50px;
-            border-radius: 12px;
-            box-shadow: 0 12px 35px rgba(60,47,47,0.18), inset 0 0 30px rgba(178,34,52,0.05);
+            background: #f8f0e0; /* warm aged parchment */
+            padding: 40px 45px;
+            border-radius: 14px;
+            box-shadow: 0 15px 40px rgba(60,47,47,0.2), inset 0 0 35px rgba(178,34,52,0.06);
             position: relative;
-            border: 2px solid rgba(178,34,52,0.15);
+            border: 2px solid rgba(178,34,52,0.18);
         }
         #fact-container::before {
             content: "";
             position: absolute;
-            inset: -15px;
-            background: radial-gradient(circle at 25% 75%, rgba(255,255,240,0.35) 0%, transparent 60%);
+            inset: -18px;
+            background: radial-gradient(circle at 20% 80%, rgba(255,255,240,0.4) 0%, transparent 65%);
             pointer-events: none;
         }
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: #8b4513; /* rustic brown */
+            font-size: 2.6rem;
+            color: #8b4513;
             margin: 0 0 0.8rem;
             text-align: center;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         }
         #date-header {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: #4a2e1a;
             text-align: center;
-            margin: 0 0 1.5rem;
+            margin: 0 0 1.6rem;
             font-style: italic;
         }
         #fact {
-            font-size: 1.3rem;
-            line-height: 1.6;
-            margin: 1.2rem 0 1.5rem;
+            font-size: 1.35rem;
+            line-height: 1.65;
+            margin: 1.3rem 0 2rem;
             color: #2e1b0f;
         }
-        #note, #filter-note {
-            font-size: 0.95rem;
+        #note {
+            font-size: 1rem;
             color: #6b4e3a;
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             font-style: italic;
         }
-        #controls {
-            text-align: center;
-            margin: 1.2rem 0 1.8rem;
-        }
-        select {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.1rem;
-            padding: 6px 14px;
-            border: 1px solid #8b4513;
-            border-radius: 5px;
-            background: #fdfaf3;
-            color: #4a2e1a;
+        #more-btn {
+            display: block;
+            margin: 20px auto 0;
+            padding: 12px 28px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+            background: #b22234;
+            border: none;
+            border-radius: 8px;
             cursor: pointer;
+            box-shadow: 0 4px 12px rgba(178,34,52,0.3);
+            transition: all 0.2s ease;
+        }
+        #more-btn:hover {
+            background: #9b1d2d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(178,34,52,0.4);
         }
         #loading {
             font-size: 1.2rem;
@@ -101,17 +107,18 @@
             margin-bottom: 1.2rem;
         }
         footer {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #6b4e3a;
             text-align: center;
             line-height: 1.4;
-            margin-top: 1.8rem;
-            border-top: 1px solid rgba(178,34,52,0.12);
-            padding-top: 1rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(178,34,52,0.15);
+            padding-top: 1.2rem;
+            max-width: 720px;
         }
         footer small {
             display: block;
-            margin-top: 0.4rem;
+            margin-top: 0.5rem;
             font-style: italic;
         }
     </style>
@@ -124,31 +131,19 @@
         <div id="note"></div>
         <p id="fact"></p>
 
-        <div id="controls">
-            <label for="decade">Filter by Decade: </label>
-            <select id="decade">
-                <option value="all">All Eras</option>
-                <option value="colonial">Colonial / Pre-1776</option>
-                <option value="1700">1700s</option>
-                <option value="1800">1800s</option>
-                <option value="1900">1900s</option>
-                <option value="2000">2000s+</option>
-            </select>
-        </div>
-
-        <div id="filter-note"></div>
+        <button id="more-btn">See Another Event from Today</button>
 
         <div id="loading">Loading your American historical moment...</div>
 
         <footer>
-            <p>Tap your NFC bracelet again for a new fact.<br>
-            Come back tomorrow for fresh moments from this day in America's story.</p>
+            <p>Tap your NFC bracelet to start • Press the button above for more facts from this day</p>
             <small>Honoring 250 Years of American Liberty • Facts from Wikimedia OnThisDay & curated U.S. sources</small>
         </footer>
     </div>
 
     <script>
         function shuffleArray(array) {
+            if (!Array.isArray(array) || array.length === 0) return [];
             const shuffled = array.slice();
             for (let i = shuffled.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -175,15 +170,10 @@
 
         const storageKeyAll = `allEvents_${month}_${day}`;
         const storageKeyRemaining = `remainingEvents_${month}_${day}`;
-        const storageKeyFilter = `decadeFilter_${month}_${day}`;
 
         let allEvents = JSON.parse(localStorage.getItem(storageKeyAll)) || [];
         let remainingEvents = JSON.parse(localStorage.getItem(storageKeyRemaining)) || [];
-        let currentFilter = localStorage.getItem(storageKeyFilter) || 'all';
 
-        document.getElementById('decade').value = currentFilter;
-
-        // Expanded keywords including Native American terms
         const usKeywords = [
             'united states', 'u.s.', 'usa', 'america', 'american', 'washington', 'lincoln', 'jefferson',
             'roosevelt', 'kennedy', 'king', 'civil war', 'revolutionary', 'declaration', 'constitution',
@@ -199,41 +189,23 @@
             return usKeywords.some(k => text.includes(k));
         }
 
-        function getDecade(yearStr) {
-            const yearNum = parseInt(yearStr.replace(/\D/g, ''), 10);
-            if (isNaN(yearNum) || yearNum < 1776) return 'colonial';
-            const century = Math.floor(yearNum / 100) * 100;
-            return century.toString();
-        }
-
-        function filterByDecade(events, decade) {
-            if (decade === 'all') return events;
-            return events.filter(e => getDecade(e.year) === decade);
-        }
-
         async function fetchFacts() {
-            const datePath = `${month}/${day}`;
-            const sources = [
-                // Primary: Wikimedia OnThisDay (events, births, deaths)
-                fetch(`https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/${datePath}`)
-                    .then(res => res.json())
-                    .then(data => {
-                        let combined = [];
-                        (data.events || []).forEach(e => combined.push({year: e.year, text: e.text, type: 'event'}));
-                        (data.births || []).forEach(b => combined.push({year: b.year, text: b.text, type: 'birth'}));
-                        (data.deaths || []).forEach(d => combined.push({year: d.year, text: d.text, type: 'death'}));
-                        return combined;
-                    })
-                    .catch(() => [])
-            ];
+            let combined = [];
 
-            const results = await Promise.all(sources);
-            let combinedFacts = results.flat();
+            try {
+                const res = await fetch(`https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/${month}/${day}`);
+                const data = await res.json();
 
-            // Deduplicate & filter for American (including Native)
-            combinedFacts = deduplicateFacts(combinedFacts);
-            const usOnly = combinedFacts.filter(isUSRelated);
-            allEvents = usOnly.length > 0 ? usOnly : combinedFacts;
+                (data.events || []).forEach(e => combined.push({year: e.year, text: e.text, type: 'event'}));
+                (data.births || []).forEach(b => combined.push({year: b.year, text: b.text, type: 'birth'}));
+                (data.deaths || []).forEach(d => combined.push({year: d.year, text: d.text, type: 'death'}));
+            } catch (err) {
+                console.error('Wikimedia API error:', err);
+            }
+
+            combined = deduplicateFacts(combined);
+            const usOnly = combined.filter(isUSRelated);
+            allEvents = usOnly.length > 0 ? usOnly : combined;
 
             localStorage.setItem(storageKeyAll, JSON.stringify(allEvents));
 
@@ -241,27 +213,17 @@
                 document.getElementById('note').textContent = '(Limited U.S./Native-specific events today — showing notable historical moments)';
             }
 
-            applyFilter();
-        }
+            // Initialize remaining with full shuffled list
+            remainingEvents = shuffleArray(allEvents);
+            localStorage.setItem(storageKeyRemaining, JSON.stringify(remainingEvents));
 
-        function applyFilter() {
-            const filtered = filterByDecade(allEvents, currentFilter);
-            if (filtered.length === 0) {
-                document.getElementById('fact').textContent = '';
-                document.getElementById('filter-note').textContent = 'No events recorded in this decade for today. Try "All Eras" or a different decade!';
-                document.getElementById('loading').style.display = 'none';
-                remainingEvents = [];
-            } else {
-                remainingEvents = shuffleArray(filtered);
-                localStorage.setItem(storageKeyRemaining, JSON.stringify(remainingEvents));
-                document.getElementById('filter-note').textContent = '';
-                displayFact();
-            }
+            displayFact();
         }
 
         function displayFact() {
             const factEl = document.getElementById('fact');
             const loadingEl = document.getElementById('loading');
+            const moreBtn = document.getElementById('more-btn');
 
             if (remainingEvents.length > 0) {
                 const item = remainingEvents.shift();
@@ -270,22 +232,27 @@
                 const typeText = item.type.charAt(0).toUpperCase() + item.type.slice(1);
                 factEl.innerHTML = `In <strong>${item.year}</strong> <em>(${typeText})</em>: ${item.text}`;
                 loadingEl.style.display = 'none';
+                moreBtn.style.display = 'block';
             } else {
-                factEl.textContent = 'No more facts available for this filter today. Try another decade or come back tomorrow!';
-                loadingEl.style.display = 'none';
+                // Reshuffle when exhausted
+                remainingEvents = shuffleArray(allEvents);
+                localStorage.setItem(storageKeyRemaining, JSON.stringify(remainingEvents));
+                if (remainingEvents.length > 0) {
+                    displayFact(); // show first of new shuffle
+                } else {
+                    factEl.textContent = 'No facts available today — check back tomorrow!';
+                    loadingEl.style.display = 'none';
+                    moreBtn.style.display = 'none';
+                }
             }
         }
 
-        document.getElementById('decade').addEventListener('change', (e) => {
-            currentFilter = e.target.value;
-            localStorage.setItem(storageKeyFilter, currentFilter);
-            applyFilter();
-        });
+        document.getElementById('more-btn').addEventListener('click', displayFact);
 
         if (allEvents.length === 0) {
             fetchFacts();
         } else {
-            applyFilter();
+            displayFact();
         }
     </script>
 </body>
